@@ -1,0 +1,46 @@
+
+.source{
+	font-size: 13pt;
+	font-weight: bold;
+	color: #0aad36;
+}
+.date{
+	font-size: 11pt;
+	padding-right: 5px;
+}
+.title{
+	font-size: 15pt;
+	font-weight: bold;
+}
+.description{
+	font-size: 11pt;
+	color: #B9B1AF;
+}
+nav{
+  
+}
+
+.title2{
+	font-size: 13pt;
+	font-weight: bold;
+}
+
+.card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .description {
+    display: none;
+  }
+  .row3{
+  	display: none;
+  }.row1{
+  	display: none;
+  }
+  .title{
+	font-size: 12pt;
+	font-weight: bold;
+	}
+}
