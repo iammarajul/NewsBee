@@ -52,13 +52,16 @@
 	<!-- navbar end -->
 
 	<div class="container">
-
+		<form>
 		<div class="input-group mb-3 px-3 pt-2">
-		  <input type="text" class="form-control" placeholder="Search News" aria-label="Recipient's username" aria-describedby="basic-addon2">
-		  <div class="input-group-append">
-		    <button class="btn btn-outline-secondary" type="button">Search</button>
-		  </div>
+			
+			  <input type="text" class="form-control" placeholder="Search News" id="serarchbox" aria-describedby="basic-addon2">
+			  <div class="input-group-append">
+			    <button type="submit" class="btn btn-outline-secondary" id="Search-btn" type="button">Search</button>
+			  </div>
+			
 		</div>
+		</form>
 		<div id="loader" style="text-align: center;">
 		<button class="btn btn-primary" type="button" disabled>
 		  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>

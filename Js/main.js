@@ -1,6 +1,6 @@
 var pk = [];
 
-
+var page_status = 1;
 
 function setModal(i){
 
@@ -175,11 +175,14 @@ function factch_own_post(){
     }).done(function( msg ) {
         var msg = JSON.parse(msg);
         SetOwnshareView(msg);
+        page_status = 2;
     });
 }
 
 function home_post(){
   SetNewsView(pk);
+  page_status = 1;
+
 }
 
 
@@ -196,6 +199,7 @@ function factch_others_post(){
     }).done(function( msg ) {
         var msg = JSON.parse(msg);
         SetothershareView(msg);
+        page_status = 3;
     });
 }
 
