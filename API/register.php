@@ -40,6 +40,7 @@
         }
         else if(strlen($password)<6){
             echo "5";
+            die();
         }
 
         else {
@@ -57,6 +58,7 @@
                 if($statement->rowCount() == 1){
 
                     echo "3";
+                    die();
                 }
             }
             catch(PDOException $ex) {

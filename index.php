@@ -52,7 +52,7 @@
 	<!-- navbar end -->
 
 	<div class="container">
-		<form>
+		<form onsubmit="return Search_start()">
 		<div class="input-group mb-3 px-3 pt-2">
 			
 			  <input type="text" class="form-control" placeholder="Search News" id="serarchbox" aria-describedby="basic-addon2">

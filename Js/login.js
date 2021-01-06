@@ -19,7 +19,7 @@ function validateForm() {
     }).done(function( msg ) {
 
     	if(msg=="1"){
-			alert("Registration successful!! Log In to continue");
+			
     		window.location = 'index.php';
     	}else {
 			alert("Wrong username/password");

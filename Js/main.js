@@ -1,4 +1,6 @@
 var pk = [];
+var pk2 = [];
+
 
 var page_status = 1;
 
@@ -57,13 +59,13 @@ function fatch_news_data(){
          $('#loader').hide();
       },
     }).done(function( msg ) {
-        var msg = JSON.parse(msg);
+        console.log(msg);
+        // var msg2 = JSON.parse(msg);
         msg = msg['data'];
         // console.log(msg);
 
         SetNewsView(msg);
         pk = msg; 
-
     });
    
 }
@@ -157,6 +159,7 @@ function delete_post(id){
       }).done(function( msg ) {
           console.log(msg);
           $("#own"+id).html('<p style="text-align:center"> Post deleted</p>')
+          pk2.splice(id, 1);
 
       });
   } 
@@ -200,7 +203,32 @@ function factch_others_post(){
         var msg = JSON.parse(msg);
         SetothershareView(msg);
         page_status = 3;
+        pk2 = msg;
     });
+}
+
+function setThesearch(keyword)
+{
+    for (var i = 0; i < pk2.length; i++) {
+        if(pk2[i].search(keyword)!=-1){
+
+        }
+    }
+}
+
+function Search_start(){
+
+  if(page_status == 2){
+    console.log($("#serarchbox").val().trim());
+    if($("#serarchbox").val().trim()!=""){
+      setThesearch($("#serarchbox").val().trim());
+    }
+  }
+  else{
+    alert("Currently search feature is only available in my post section ")
+  }
+
+  return false;
 }
 
 
