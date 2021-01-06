@@ -89,6 +89,9 @@ function SetNewsView(msg) {
         main_str+=temp_str;
 
     }
+     if(msg.length==0){
+      main_str+="<p style='text-align:center;'>Oh Uh! Currently No news is available for your region in English language. Come again later !</p>"
+    }
     $("#news_api").html(main_str);
 }
 
@@ -171,6 +174,7 @@ function factch_own_post(){
       url: "API/fatch_my.php",
       beforeSend: function() {
          $('#loader').show();
+         $("#news_api").html("");
       },
       complete: function(){
          $('#loader').hide();
@@ -195,6 +199,7 @@ function factch_others_post(){
       url: "API/fatch_all.php",
       beforeSend: function() {
          $('#loader').show();
+         $("#news_api").html("");
       },
       complete: function(){
        $('#loader').hide();
