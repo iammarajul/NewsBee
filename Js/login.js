@@ -18,7 +18,7 @@ function validateForm() {
 		// },
     }).done(function( msg ) {
 
-    	if(msg=="1"){
+    	if(msg.localeCompare("1")==0){
 			
     		window.location = 'index.php';
     	}else {

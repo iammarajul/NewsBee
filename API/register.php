@@ -29,7 +29,7 @@
         $password = $_POST['password'];
         $country = $_POST['country'];
         $name = $_POST['name'];
-
+        // echo strlen($password);
         if(checkDuplicateEntries("users", "username", $username, $db)){
             echo "1";
             die();

@@ -59,13 +59,13 @@ function fatch_news_data(){
          $('#loader').hide();
       },
     }).done(function( msg ) {
-        console.log(msg);
-        // var msg2 = JSON.parse(msg);
-        msg = msg['data'];
+        // console.log(msg);
+        var msg2 = JSON.parse(msg);
+        msg2 = msg2['data'];
         // console.log(msg);
 
-        SetNewsView(msg);
-        pk = msg; 
+        SetNewsView(msg2);
+        pk = msg2; 
     });
    
 }
@@ -159,7 +159,7 @@ function delete_post(id){
       }).done(function( msg ) {
           console.log(msg);
           $("#own"+id).html('<p style="text-align:center"> Post deleted</p>')
-          pk2.splice(id, 1);
+          // pk2.splice(id, 1);
 
       });
   } 

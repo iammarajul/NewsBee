@@ -1,4 +1,10 @@
-1.if you don't have xampp then install xampp
+# Live DEMO Link
+
+http://newsbee.unaux.com/NewsBee/
+
+# Local instalation 
+
+1. if you don't have xampp then install xampp
 
 2. Afterunzipping this folder keep this NewsBee folder into htdocs of Xampp.
 
